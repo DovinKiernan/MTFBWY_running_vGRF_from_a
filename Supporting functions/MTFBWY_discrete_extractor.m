@@ -19,7 +19,7 @@ elseif isempty(second_mag)
     second = second_mag;
 end
 % Use an adapted version of Blackmore et al's (2015) HiF surrogate function
-% Use fft to observe the frequency content of the signal, zero padding to 1001
+% Use fft to observe the frequency content of the signal, zero padding to 2^nextpow
 n = 2^nextpow2(size(tseries,1));
 Y = fft(tseries, n, 1);
 % The frames of the fft correspond to 0:Fs/2 and back
