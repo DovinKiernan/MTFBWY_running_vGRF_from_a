@@ -137,7 +137,7 @@ function [first, rate, second, average, tseries] = MTFBWY_running_vGRF_from_a(da
 addpath(genpath('D:\Research\Davis_Human Performance Lab\2_1_May the force be with you\Code\MTFBWY and tester\MTFBWY'))
 
 % Calculate sample frequency from time stamps
-Fs = mean(diff(data(:,1)))*1000;
+Fs = 1000/mean(diff(data(:,1)));
 % % Alternatively, UI specify your sample frequency
 % Fs = cell2mat(inputdlg('Enter sample frequency'));
 
